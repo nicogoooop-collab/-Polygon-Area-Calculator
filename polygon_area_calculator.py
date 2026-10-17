@@ -1,9 +1,8 @@
 class Rectangle:
     def __init__(self, width, height):
-        stats = Rectangle()
         self.width = width
         self.height = height
     def set_width(self, width):
-        pass
+        self.width = width
     def set_height(self, height):
-        pass  
+        self.height = height
