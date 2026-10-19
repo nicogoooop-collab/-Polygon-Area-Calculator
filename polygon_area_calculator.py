@@ -1,3 +1,4 @@
+
 class Rectangle:
     def __init__(self, width, height):
         self.width = width
@@ -15,7 +16,7 @@ class Rectangle:
     def get_diagonal(self):
         diagonal = ((self.width ** 2) + (self.height ** 2)) ** 0.5 
         return diagonal
-    def get_picture(self):
+    def get_picture(self): 
         if self.width > 50 or self.height > 50:
             return "Too big for picture."
         else:
@@ -28,4 +29,11 @@ class Rectangle:
         height_size = self.height // shape.height
         total = with_size * height_size
         return total
-        
+
+    def __str__(self):
+        return f"Rectangle(width={self.width}, height={self.height})"
+class square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)
+    def __str__(self):
+        return f"Square(side={self.width})"
